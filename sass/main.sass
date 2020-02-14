@@ -1,0 +1,629 @@
+@import "vars"
+@import "libs"
+@import "mixins"
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Playfair+Display:700,700i&display=swap')
+
+::placeholder
+	color: #666
+
+::selection
+	// background-color: $accent
+	color: #fff
+::h1
+	color: #ffffff
+
+
+input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+html,
+body
+	font-size: 1rem
+	min-width: 320px
+	position: relative
+	overflow-x: hidden
+	height: 100%
+
+h1
+	font-size: 1.87rem
+	font-family: "Playfair Display"
+	font-weight: 700
+	font-style: italic
+	line-height: 1.5rem
+	text-transform: uppercase
+
+h2		
+	font-size: 1.75rem
+	font-family: "Playfair Display"
+	font-weight: 700
+	line-height: 1.87rem
+
+
+h3
+	font-size: 1.12rem
+	font-family: "Open Sans"
+	font-weight: 400
+	line-height: 1.5rem
+
+
+h4	
+	font-size: 0.87rem
+	font-family: "Open Sans"
+	font-weight: 400
+	line-height: 1.5rem
+
+
+// Custom Sass / Remove before use
+
+.container
+	width: 1200px
+
+
+a
+	color: #ffffff
+	text-decoration: none
+	&:hover
+		text-decoration: none
+		color: #000000
+
+button 
+	border: none
+	background-color: transparent
+	color: unset
+	outline: none !important
+
+
+.d-f
+	display: flex
+
+.d-fb
+	display: flexbox	
+
+.d-b
+	display: block	
+
+.jc-c
+	justify-content: center
+
+.jc-en
+	justify-content: flex-end	
+
+.jc-st
+	justify-content: flex-start	
+
+.jc-sb
+	justify-content: space-between
+
+.jc-sa
+	justify-content: space-around	
+.ai-s
+	align-items: flex-start
+.ai-c
+	align-items: center
+
+.ai-fend
+	align-items: flex-end
+
+.fd-r
+	flex-direction: row
+
+.fd-c
+	flex-direction: column
+
+.w-100
+	width: 100%
+
+.w-90
+	width: 90%	
+
+.w-80
+	width: 80%		
+
+.h-100
+	height: 100vh	
+
+
+// start styles	
+
+//LOGO + OPEN REGISTRATION + MENU HAMBURGER	
+
+.first-screen
+	height: 100vh
+    
+
+.header
+	width: 100vw
+	height: 130px
+	top: 0
+	position: absolute
+	background-color: $bg-color
+	z-index: 10
+	&__container
+		height: 100%
+	&__logo__img
+		width: 130%
+		height: auto
+	&__nav
+		width: 100%
+		height: 100%
+
+
+.hamburger-menu
+	display: none
+	margin-top: 0.5em
+
+
+.hamburger-menu li
+	list-style-type: none
+	font-size: 0.675rem
+	
+
+.hamburger-icon
+	display: none
+	position: absolute
+	top: 6em
+	right: 0.7em	
+
+.hamburger-icon img
+	width: 50%
+	height: 50%	
+  
+.reg__img
+	margin-left: 1em
+    margin-bottom: 0.2em
+	&:hover
+		background-color: #e2d1a6 
+
+.registration__link
+	font-family: $default-font 
+	color: #ffffff
+	text-transform: uppercase
+    font-size: 0.87rem
+	font-weight: 400
+	transition: all .3s ease
+	&:hover
+	    color: #e2d1a6
+
+.registration
+	&_name
+		outline: none
+		&:hover
+			color: #e2d1a6  
+
+
+//NAVBAR MAIN MENU	
+
+.dropdown 
+	display: inline-block	
+	position: relative
+	color: #ffffff
+	flex-direction: row
+	font-size: $h3-size
+	font-weight: 700
+	font-family: $default-font
+	&__dropbtn 
+	  background-color: $bg-color	
+      cursor: pointer  
+      border-style: none
+	  color: #ffffff
+	&_menu
+	  list-style-type: none
+	  color: #ffffff
+      text-align: center
+      padding: 16px
+      text-decoration: none
+	  margin: 0
+	  padding-left: 5px
+	  font-size: 1rem
+	  line-height: 1.5rem
+	  font-weight: 400
+	  text-transform: uppercase
+	  font-family: $default-font
+	&_menu__list
+	  display: block
+	  border-bottom: 1px #fff solid
+	  &:first-child
+	    margin-left: 0
+	  &:last-child
+		  border: none
+	&_menu__link
+	  transition: all .3s ease
+	  padding: 4px 10px
+	  color: #ffffff
+	  &:hover
+        color: #e2d1a6
+	&_content
+	  display: none
+	  position: absolute
+	  background-color: $bg-color
+	  z-index: 1
+	  padding: 5px 15px
+
+.dropbtn
+	transition: all .3s ease
+	&:hover
+		color: #e2d1a6
+
+.show 
+    display: block
+
+
+.navbar     
+//	position: relative
+
+
+
+// REGISTRATION FORM
+
+.modalwin         
+    width: 596px
+    height: 361px
+    border: 1px solid #ffffff
+    background-color: #353436           
+    top: 50%    //отступ сверху 
+    right: 0
+    left: 0
+    margin: 0 auto
+    z-index: 2   //поверх всех
+    display: none   //сначала невидим 
+    position: fixed    //фиксированное позиционирование, окно стабильно при прокрутке 
+    padding: 10px 76px 27px
+    &__img
+      padding-right: 10em    
+
+.modalwin_h2
+	color: #ffffff
+    font-weight: 700
+    text-transform: uppercase 	
+    font-family: $variant-font
+	text-align: center
+	line-height: 1.48rem
+
+
+.registration__container_form__h3
+	+container_form__h3 ($h3-size, $variant-font)
+
+
+.recover
+	font-size: 0.75rem
+	font-family: $default-font
+						   
+
+.hider
+	position: absolute
+	top: 0.9em
+	right: 1.4em
+	text-align: center
+
+
+#shadow 
+    position: fixed
+    width: 100%
+    height: 100%
+    z-index: 1    //поверх всех  кроме окна
+    background: #000
+    opacity: 0.5 //прозрачность
+    left: 0
+    top: 0
+
+
+.accedi,
+.registrati
+	width: 41%
+	&__p
+		//font-size: 12px
+		margin-top: 0.9em
+
+
+.container_form__registrati #val-btn
+	margin-top: -1em
+	
+			
+.input 			
+	width: 100%
+    height: 31px
+    color: #b5b4b4
+    font-family: $default-font 
+    font-size: 1rem
+    font-weight: 400
+	line-height: 1.5rem
+	border: none
+	margin: 7px auto 7px
+	padding-left: 10px
+	&:first-child
+		margin-bottom: 12px
+	&:nth-child(2)
+		margin-bottom: 9px
+	&:nth-child(3)	
+		margin-bottom: 12px	
+			
+			
+.accedi__button 
+	margin-top: 0.7em
+	transition: all .3s ease
+	+accedi__button($btn-color, $btn-bgcolor)		 
+
+.registrati__button	
+	transition: all .3s ease
+	+accedi__button($btn-color, $btn-bgcolor)
+	margin-top: 0.7em
+
+.accedi input
+	&:first-child
+		margin-bottom: 7px
+    
+						
+.button:hover 
+	background: #e2d1a6
+	color: #ffffff
+	max-width: 184px
+    height: 31px
+	border: none					
+			
+.container_form__recover label 
+	color: #ffffff
+	
+
+
+//SLIDER
+
+.bxslider
+	width: 100%
+	height: 100%
+//	background-size: cover 
+	
+
+.bx-wrapper 
+	margin-bottom: 0
+	height: 100%
+
+.bx-viewport
+	height: 100%	
+
+
+.bx-wrapper .bx-controls-auto,
+.bx-wrapper .bx-pager 
+    position: absolute
+    bottom: 40px
+    width: 100%
+
+.bx-wrapper .bx-pager 
+    text-align: center
+    color: #ffffff
+
+.bx-wrapper .bx-pager.bx-default-pager a 
+	background: #fff
+	display: block
+	width: 15px
+	height: 15px
+	margin: 0px 9px
+	outline: none
+	border-radius: 100rem
+	border: 2px solid #000000	
+ 
+
+.bx-wrapper .bx-pager.bx-default-pager a.active
+	background:#e2d1a6
+
+
+.slide
+	background: url(../img/Fabulous-Modern-Pendant-Lamp-For-Dining-Room.jpg.png) no-repeat top center
+	height: 100%
+	width: 100%
+	background-size: cover
+
+
+//CONTEMPORANEI
+
+.offer__conteporanei
+	width: 43%
+	height: 17%
+	background-color: rgba(#ffffff, 0.8)
+//    position: absolute
+	margin-top: -2em
+	z-index: 2
+	align-items: flex-end
+
+.text_conteporanei 
+	height: 100%
+	width: 100%
+	padding-left: 2em
+	padding-top: 1.5em	
+	&__h1
+		color: #000000
+
+.text_conteporanei p
+	font-size: 1.12rem
+	font-family: "Open Sans"	
+	color: #000000	
+	font-weight: 400
+	line-height: 1.5rem
+	margin-top: 2em
+
+
+// APPROFONDISCI
+
+.aperti_container
+	position: absolute
+	bottom: 0
+
+.offer__container
+	width: 90%
+
+.approfondisci_content   
+	&__h2
+		// width: 400px 
+//	position: absolute
+
+.approfondisci_content p
+	+approfondisci_content ($pAprof-size, $default-font) 
+	
+
+.approfondisci__link_wrap
+	display: flex
+	flex-direction: row
+	justify-content: flex-end
+	width: 100%
+	&__a
+		color: #ffffff
+		+approfondisci__link_wrap__a ($h3-size, $default-font)
+		text-align: right
+		padding-right: .9em
+
+.approfondisci
+	height: 100%	
+
+
+.offerBox
+	display: none
+	flex-grow: 1
+	height: 100%
+
+.show
+	display: flex
+
+.offerbtn
+	background-color: #ffffff
+	width: 88px
+	height: 30px
+	color: #666666
+	position: relative
+	padding: 6px 22px
+	
+.offer__approfondisci1
+	background-color: #e2d1a6
+	color: #000000
+	font-family: $default-font
+    font-size: 1rem
+    font-weight: 400
+	padding: .5em 0 0 .8em
+
+.offer__approfondisci2
+	background-color: #ffffff	
+	color: #000000
+	padding: .5em 0 0 .8em		
+
+.offer__approfondisci2 a
+	color: #000000
+ 
+.offer__approfondisci3
+	background-color: #000000	
+	color: #ffffff
+	padding: .5em 0 0 .8em
+		
+
+.offer__approfondisci3 h2
+	margin-bottom: 1em
+
+.approfondisci
+	display: flex
+	flex-direction: column
+	justify-content: space-between		
+
+
+//FOOTER LAMPADARI + FORM
+
+.footer
+	background-color: #353436
+	flex-wrap: wrap
+	&__lampadari
+	   width: 80%
+	   margin-top: 2em 	   
+ 	
+.lampadari_block
+	width: 22%
+	margin-bottom: 2.5em
+
+.lampadari_block
+	&__h4
+		max-width: 189px
+		+lampadari_block__h4 ($h4-size, $variant-font)
+
+
+.lampadari_block			
+	&__p
+		+lampadari_block__p ($pLamp-size, $default-font)
+		max-width: 180px
+	
+.container_form__lampadari
+	display: flexbox
+	flex-direction: column
+//	margin-bottom: 0
+
+
+.lampadari__button
+	+accedi__button($btn-color, $btn-bgcolor)
+	transition: all .3s ease
+	width: 100%
+	margin-top: 7px
+	&:hover
+	  background: #e2d1a6
+	  color: #ffffff
+	  max-width: 184px
+      height: 31px
+	  border: none 
+
+.footer-tab-form
+	font-size: 0.875rem	
+	max-width: 13em	
+
+.container_form__lampadari a	
+	text-decoration: none
+
+
+#checkbox .a
+ 	padding-right: 1.1em
+
+.recover 
+	font-size: 0.625rem
+	font-family: $default-font
+	color: #ffffff
+	max-width: 19em
+	margin-top: 7px
+	span
+		padding-left: .5em
+	
+
+
+.clr
+	height: 200px
+
+
+//FOOTER CONTACTS SOCIAL ADDRESS 
+
+
+.fa
+	color: #ffffff
+	font-size: 1.5rem
+
+.footer
+	&__contacts
+		padding-bottom: 1em
+	&__address
+		color: #ffffff
+		font-size: 0.75rem
+		font-family: $default-font 
+	&__social
+		display: inline-block
+
+	
+.footer__social i
+    margin-left: .5em
+
+.footer__language a
+	padding-left: 0.5em 
+	border-right: solid 1px #ffffff
+	padding-right: 0.3em
+	color: #ffffff
+	font-family: $default-font 
+	font-size: 0.75rem
+	font-weight: 400
+	line-height: 1.5rem
+	text-transform: uppercase
+	 
+// end of styles
+
+@import media

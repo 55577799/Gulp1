@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+
+	<meta charset="utf-8">
+	<title>mmlampadari</title>
+	<meta name="viewport" content="width=device-width">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="icon" href="img/browz.png">
+	<meta property="og:image" content="img/@1x/preview.jpg">
+	<link rel="stylesheet" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/styles.min.css">
+
+</head>
+
+<body>
+
+	<div class="first-screen">
+		<header class="header d-f fd-r jc-c">
+			<div class="container header__container d-f fd-r ai-c jc-sb">
+
+				<div class="logo header__logo">
+					<a href="index.html" class="logo__link"><img src="img/logo.png" alt="mmlampadari"
+							class="header__logo__img"></a>
+				</div>
+
+				<div class="hamburger">
+					<div class="hamburger-icon">
+						<img src="img/hamburger.png" alt="mmlampadari">
+						<ul class="hamburger-menu">
+							<li class="hamburger-menu__item"><a href="#">HOME</a></li>
+							<li class="hamburger-menu__item"><a href="#">AZIENDA</a></li>
+							<li class="hamburger-menu__item"><a href="#">COLLEZIONI</a></li>
+							<li class="hamburger-menu__item"><a href="#">NEWS</a></li>
+							<li class="hamburger-menu__item"><a href="#">CONTATTI</a></li>
+						</ul>
+					</div>
+				</div>
+
+				<nav class="nav header__nav d-f fd-c jc-sa ai-fend">
+					<div class="registration header__registration d-f fd-c jc-sb ai-fend">
+						<a href="#" class="registration__link" onclick="showModalWin()"><span
+								class="registration_name">area resirvata </span>
+							<img src="img/lock.png" alt="mmlampadari" class="reg__img"> </a>
+
+						<!-- REGISTRATION FORM -->
+
+						<div id="popupWin" class="modalwin">
+							<div id="hider" class="hider" onclick="closeModalWin()"><img
+									src="img/Oggetto_vettoriale_avanzato.png" alt="mmlampadari"></div>
+							<h2 class="modalwin_h2"> <a href="#"> AREA RESERVATA </a> </h2>
+							<div id="closeForm"
+								class="container_form registration__container_form d-f jc-sb fd-r w-100">
+								<div class="accedi container_form__accedi d-fb fd-c jc-c">
+									<h3 class="registration__container_form__h3"> <a href="#">ACCEDI </a> </h3>
+									<form action="#" class="tab-form" id="registrationForm">
+										<input class="input" type="email" placeholder="E-mail" id="accedi_email" required>
+										<input class="input" type="password" placeholder="Password" required>
+										<button id="val-btn_accedi" class="button accedi__button">ACCEDI</button>
+										<a href="#">
+											<p class="accedi__p">Password dimenticata</p>
+										</a>
+									</form>
+								</div>
+
+								<div class="registrati container_form__registrati d-fb fd-c jc-c">
+									<h3 class="registration__container_form__h3"> <a href="#"> REGISTRATI </a> </h3>
+									<form action="#" class="tab-form" id="myform_registrati">
+										<input class="input" type="text" name="name" id="registrati_name" placeholder="Name">
+										<input class="input" type="text" name="name" id="registrati_surname" placeholder="Cognome">
+										<input class="input" type="email" name="email" id="registrati_email" placeholder="E-mail">
+										<input class="input" type="password" name="password" id="password"
+											placeholder="Password">
+										<div class="recover container_form__recover">
+											<input id="checkbox1" type="checkbox" name="checkbox">
+											<label for="checkbox1">Acconsento al trattamento <a href="#">dei
+													dati</a></label>
+													<input id="checkbox2" type="checkbox" name="checkbox">
+											<label for="checkbox2">Mi iscrivo alla Newsletter <a href="#">dei
+													dati</a></label>
+										</div>
+										 <button id="val-btn_registrati"
+												class="button registrati__button">ISCRIVITI</button> 
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- MAIN MENU -->
+
+					<div class="navbar">
+						<div class="dropdown">
+							<button class="dropbtn" onclick="showDropdown('.home')">HOME</button>
+							<div class="dropdown_content home">
+								<ul class="dropdown_menu">
+									<li class="dropdown_menu__list"><a href="#" class="dropdown_menu__link">storia</a>
+									</li>
+									<li class="dropdown_menu__list"><a href="#" class="dropdown_menu__link">mm
+											design</a></li>
+									<li class="dropdown_menu__list"><a href="#" class="dropdown_menu__link">designer</a>
+									</li>
+									<li class="dropdown_menu__list"><a href="#"
+											class="dropdown_menu__link">certificazioni</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="dropdown">
+							<button class="dropbtn" onclick="showDropdown('.azienda')">AZIENDA</button>
+							<div class="dropdown_content azienda">
+								<ul class="dropdown_menu">
+									<li class="dropdown_menu__list"><a href="#" class="dropdown_menu__link">storia</a>
+									</li>
+									<li class="dropdown_menu__list"><a href="#" class="dropdown_menu__link">mm
+											design</a></li>
+									<li class="dropdown_menu__list"><a href="#" class="dropdown_menu__link">designer</a>
+									</li>
+									<li class="dropdown_menu__list"><a href="#"
+											class="dropdown_menu__link">certificazioni</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="dropdown">
+							<button class="dropbtn" onclick="showDropdown('.collezioni')">COLLEZIONI</button>
+							<div class="dropdown_content collezioni">
+								<ul class="dropdown_menu">
+									<li class="dropdown_menu__list"><a href="#" class="dropdown_menu__link">storia</a>
+									</li>
+									<li class="dropdown_menu__list"><a href="#" class="dropdown_menu__link">mm
+											design</a></li>
+									<li class="dropdown_menu__list"><a href="#" class="dropdown_menu__link">designer</a>
+									</li>
+									<li class="dropdown_menu__list"><a href="#"
+											class="dropdown_menu__link">certificazioni</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="dropdown">
+							<button class="dropbtn" onclick="showDropdown('.news')">NEWS</button>
+							<div class="dropdown_content news">
+								<ul class="dropdown_menu">
+									<li class="dropdown_menu__list"><a href="#" class="dropdown_menu__link">storia</a>
+									</li>
+									<li class="dropdown_menu__list"><a href="#" class="dropdown_menu__link">mm
+											design</a></li>
+									<li class="dropdown_menu__list"><a href="#" class="dropdown_menu__link">designer</a>
+									</li>
+									<li class="dropdown_menu__list"><a href="#"
+											class="dropdown_menu__link">certificazioni</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="dropdown">
+							<button class="dropbtn" onclick="showDropdown('.contatti')">CONTATTI</button>
+							<div class="dropdown_content contatti">
+								<ul class="dropdown_menu">
+									<li class="dropdown_menu__list"><a href="#" class="dropdown_menu__link">address</a>
+									</li>
+									<li class="dropdown_menu__list"><a href="#" class="dropdown_menu__link">etc</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</header>
+
+		<!--SLIDER + LAMPADARI CONTEMPORANEI OFFER-->
+
+		<div class="offer w-100 h-100">
+			<div class="bxslider d-f fd-r">
+				<div class="slide d-f jc-en ai-c">
+					<div class="conteporanei offer__conteporanei d-f fd-c ai-fend">
+						<div class="text_conteporanei">
+							<h1 class="text__conteporanei__h1">Lampadari contemporanei</h1>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor dolore
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="slide d-f jc-en ai-c">
+					<div class="conteporanei offer__conteporanei d-f fd-c ai-fend">
+						<div class="text_conteporanei">
+							<h1 class="text__conteporanei__h1">Lampadari contemporanei</h1>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor dolore
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="slide d-f jc-en ai-c">
+					<div class="conteporanei offer__conteporanei d-f fd-c ai-fend">
+						<div class="text_conteporanei">
+							<h1 class="text__conteporanei__h1">Lampadari contemporanei</h1>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor dolore
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- APPROFONDISCI OFFER	 -->
+
+			<div class="aperti_container d-f fd-r jc-c w-100">
+				<div class="container offer__container d-f fd-c jc-c ai-c">
+					<div id="offerButton" class="offerbtn d-f jc-c ai-c" onclick="showOfferBox('#offerBox')"> <img
+							src="img/FRECCIA.png" alt="mmlampadari"></div>
+
+					<div id="offerBox" class="offerBox offer__aperti d-f fd-r ai-s">
+
+						<div class="approfondisci offer__approfondisci1">
+							<div class="approfondisci_content">
+								<h2 class="approfondisci_content__h2"> Stai pensando ad un progetto?</h2>
+								<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+									dolore </p>
+							</div>
+							<div class="approfondisci__link_wrap"><a class="approfondisci__link_wrap__a" href="#">
+									Approfondisci </a></div>
+						</div>
+
+						<div class="approfondisci offer__approfondisci2">
+							<div class="approfondisci_content">
+								<h2 class="approfondisci_content__h2"> Vi aspettiamo alla fiera Euroluce </h2>
+								<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+									dolore </p>
+							</div>
+							<div class="approfondisci__link_wrap"><a class="approfondisci__link_wrap__a" href="#">
+									Approfondisci </a></div>
+						</div>
+						<div class="approfondisci offer__approfondisci3">
+							<div class="approfondisci_content">
+								<h2 class="approfondisci_content__h2"> Scopri la nuova collezione </h2>
+								<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+									dolore </p>
+							</div>
+							<div class="approfondisci__link_wrap"><a class="approfondisci__link_wrap__a" href="#">
+									Approfondisci </a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="clr"></div>
+	</div>
+
+	<footer class="footer d-f jc-c">
+
+		<!--LAMPADARI TEXT COLUMNS-->
+
+		<div class="container footer__container d-f fd-r jc-c w-80">
+			<div class="lampadari footer__lampadari d-f fd-r jc-sb ai-fend">
+				<div class="lampadari_block footer__lampadari1">
+					<h4 class="lampadari_block__h4"> LAMPADARI MADE IN ITALY </h4>
+					<p class="lampadari_block__p"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+						eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+						veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea </p>
+				</div>
+				<div class="lampadari_block footer__lampadari2">
+					<h4 class="lampadari_block__h4"> LAMPADARI ARTIGIANALI </h4>
+					<p class="lampadari_block__p"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+						eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+						veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea </p>
+				</div>
+				<div class="lampadari_block footer__lampadari3">
+					<h4 class="lampadari_block__h4"> 45 ANNI DI ESPERIENZA </h4>
+					<p class="lampadari_block__p"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+						eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+						veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea </p>
+				</div>
+				<div class="lampadari_block container_form__lampadari">
+					<h4 class="lampadari_block__h4"> <a href="#">NEWSLETTER</a></h4>
+					<form action="#" class="footer footer-tab-form" id="lampadariForm">
+						<input class="input" type="text" name="name" id="lampadari_name" placeholder="Cognome">
+						<input class="input" type="email" placeholder="E-mail" id="lampadari_email" required>
+						<div class="recover d-b fd-r jc-sb">
+							 <input id="checkbox3" type="checkbox" name="checkbox"> 
+							 <label for="checkbox3"> <span>Acconsento al
+									trattamento dei dati </span> </label>
+							<button id="val-btn"
+									class="button lampadari__button">ISCRIVITI</button> 
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<!--FOOTER ADDRESS AND SOCIAL ICONS AND LANGUAGES-->
+
+		<div class="contacts footer__contacts d-f fd-r jc-sb w-90">
+			<div class="address footer__address d-f fd-r ai-s jc-sb w-100">
+				<p>MMLAMPADARI srl Via Feltrina 00 31111 Pederobba (TV) 0423.123456 info@mmlampadari.mm P.IVA
+					04123456789 </p>
+
+				<div class="social footer__social d-f fd-r ai-fend jc-sb">
+					<a href="http://facebook.com"> <i class="fa fa-facebook-square" aria-hidden="true"></i> </a>
+					<a href="http://instagram.com"> <i class="fa fa-instagram" aria-hidden="true"></i> </a>
+					<a href="http://pinterest.com"> <i class="fa fa-pinterest-square" aria-hidden="true"></i> </a>
+				</div>
+				<div class="language footer__language d-f fd-r ai-s jc-sb">
+					<span title="Italian"><a lang="it" href="qa-html-language-declarations.it">ITA</a></span>
+					<span title="English"><a lang="en" href="qa-html-language-declarations.en">ENG</a></span>
+					<span title="German"><a lang="de" href="qa-html-language-declarations.de">DEU</a></span>
+					<span title="Russian"><a lang="ru" href="qa-html-language-declarations.ru">РУС</a></span>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	<script src="js/scripts.min.js"></script>
+
+</body>
+
+</html>
